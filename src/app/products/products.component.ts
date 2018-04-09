@@ -4,9 +4,13 @@ import { Component } from '@angular/core';
   template: `
     <p>products works!</p>
     <nav>
-      <li><a [routerLink]="['hardware']">Hardware</a></li>
-      <li><a [routerLink]="['software']">Software</a></li>
+      <ul>
+        <li><a [routerLink]="['hardware']">Hardware</a></li>
+        <li><a [routerLink]="['software']">Software</a></li>
+      </ul>
     </nav>
-    <router-outlet></router-outlet>`
-})
+    <router-outlet></router-outlet>`,
+    styles: [`
+      nav ul li {display:inline-block; padding: 4px;}
+    `]})
 export class ProductsComponent { }
